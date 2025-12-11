@@ -1,0 +1,18 @@
+# Secrets - never commit
+.streamlit/secrets.toml
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+venv/
+.venv/
+
+# Data files (optional - remove if you want to include)
+*.csv
+*.json
+
+# OS
+.DS_Store
