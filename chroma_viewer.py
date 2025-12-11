@@ -10,7 +10,7 @@ import pandas as pd
 import plotly.express as px
 
 # === PAGE CONFIG ===
-st.set_page_config(page_title="Chroma GTM", page_icon="◈", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Chroma Signal", page_icon="◈", layout="wide", initial_sidebar_state="collapsed")
 
 # === SIMPLE PASSWORD PROTECTION ===
 # Set password via Streamlit secrets or use default
@@ -22,7 +22,7 @@ def check_password():
         st.session_state.authenticated = False
     
     if not st.session_state.authenticated:
-        st.markdown("### 🔐 Chroma GTM")
+        st.markdown("### 🔐 Chroma Signal")
         password = st.text_input("Enter password", type="password")
         if st.button("Login"):
             if password == APP_PASSWORD:
@@ -179,7 +179,7 @@ def format_df(df):
 # === HEADER ===
 h1, h2 = st.columns([6, 1])
 with h1:
-    st.markdown("### ◈ Chroma GTM")
+    st.markdown("### ◈ Chroma Signal")
 with h2:
     selected = st.selectbox("Collection", collections, label_visibility="collapsed")
 
@@ -428,5 +428,6 @@ if not insight_df.empty:
                     yaxis=dict(categoryorder='total ascending')
                 )
                 st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+
 
 
