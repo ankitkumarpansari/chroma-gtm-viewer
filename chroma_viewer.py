@@ -428,3 +428,5 @@ if not insight_df.empty:
                     yaxis=dict(categoryorder='total ascending')
                 )
                 st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+
+
